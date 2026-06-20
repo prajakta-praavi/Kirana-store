@@ -1,0 +1,4 @@
+﻿import { createFileRoute } from "@tanstack/react-router";
+import { PageHero } from "@/components/site/PageKit";
+export const Route = createFileRoute("/order-history")({ head: () => ({ meta: [{ title: "Order History" }] }), component: () => <div><PageHero eyebrow="Orders" title="Order history" subtitle="Sample order timeline with invoices, GST and reorder actions."/><section className="mx-auto max-w-4xl space-y-3 px-4 py-8">{["APNA-24091","APNA-24064","APNA-23988"].map((id,i)=><div key={id} className="rounded-2xl border border-border bg-card p-5 shadow-soft"><div className="flex justify-between gap-4"><h2 className="font-display font-black text-ink">{id}</h2><span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-black text-primary">{i===0?"Out for delivery":"Delivered"}</span></div><p className="mt-2 text-sm text-muted-foreground">{i===0?"Grooming kit and kitchen tool":"Product order bundle"} - Rs.{i===0?"1,428":"2,356"}</p></div>)}</section></div> });
+

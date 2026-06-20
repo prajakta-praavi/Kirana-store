@@ -1,0 +1,3 @@
+﻿import { createFileRoute } from "@tanstack/react-router";
+import { PageHero, InfoCard, Checklist } from "@/components/site/PageKit";
+export const Route = createFileRoute("/shipping-policy")({ head: () => ({ meta: [{ title: "Shipping Policy" }] }), component: () => <div><PageHero eyebrow="Delivery" title="Shipping policy" subtitle="Fast local delivery with clear fees and timelines."/><section className="mx-auto max-w-4xl px-4 py-8"><InfoCard title="Delivery rules"><Checklist items={["Free local delivery on orders above Rs.499.","Orders placed before 5 PM are eligible for same-day delivery.","Delivery fee is calculated at checkout for smaller orders.","Large steel items may require scheduled delivery."]}/></InfoCard></section></div> });

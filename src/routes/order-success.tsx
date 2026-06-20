@@ -1,0 +1,4 @@
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
+import { CheckCircle2 } from "lucide-react";
+export const Route = createFileRoute("/order-success")({ head: () => ({ meta: [{ title: "Order Success" }] }), component: () => <section className="mx-auto max-w-2xl px-4 py-20 text-center"><CheckCircle2 className="mx-auto size-16 text-primary"/><h1 className="mt-5 font-display text-4xl font-black text-ink">Order placed successfully</h1><p className="mt-3 text-muted-foreground">Your order APNA-{Math.floor(100000 + Math.random()*899999)} is confirmed. Tracking and invoice details will be shared by SMS and email.</p><div className="mt-6 flex justify-center gap-3"><Link to="/track-order" className="rounded-full bg-primary px-5 py-3 text-sm font-black text-primary-foreground">Track order</Link><Link to="/shop" className="rounded-full border border-border px-5 py-3 text-sm font-black text-ink">Continue shopping</Link></div></section> });
+

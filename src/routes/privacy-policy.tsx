@@ -1,0 +1,4 @@
+﻿import { createFileRoute } from "@tanstack/react-router";
+import { PageHero, InfoCard, Checklist } from "@/components/site/PageKit";
+export const Route = createFileRoute("/privacy-policy")({ head: () => ({ meta: [{ title: "Privacy Policy" }] }), component: () => <Policy title="Privacy Policy" items={["We collect customer details only for order fulfilment, invoices and support.","Payment data is handled by secure payment partners such as Razorpay.","Customer information is not sold to third parties.","Users can request data correction or deletion by contacting support."]}/> });
+function Policy({title,items}:{title:string;items:string[]}){return <div><PageHero eyebrow="Policy" title={title} subtitle="Clear store policies for a trustworthy shopping experience."/><section className="mx-auto max-w-4xl px-4 py-8"><InfoCard title={title}><Checklist items={items}/></InfoCard></section></div>}
